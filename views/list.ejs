@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+        <table border="1">
+            <tr>
+                <th>Tên người dùng</th>
+                <th>Số điện thoại</th>
+                <th>Mật khẩu</th>
+                <th>Quyền</th>
+                <th>Ngày tạo</th>
+                <th>Lịch sử tìm kiếm</th>
+                <th></th>
+            </tr> 
+            <% for (var i = 0; i < Users.length; i++) { %>
+              <tr>
+                <td><%= Users[i].name %></td>
+                <td><%= Users[i].phone %></td>
+                <td><%= Users[i].password %></td>
+                <td><%= Users[i].roles %></td>
+                <td><%= Users[i].create_date %></td>
+                <td><%= Users[i].history %></td>
+                  <form action="/select_user" method="POST">
+                    <td><button name="edit" value="<%= Users[i].phone %>">Edit</button></td>
+                  </form>
+                  <form action="/delete_user" method="POST">
+                    <td><button name="delete" value="<%= Users[i].phone %>">Delete</button></td>
+                  </form>
+                <!-- <td><input name="check" type="radio" value="<%= Users[i].phone %>"></td> -->
+              </tr>    
+            <% } %>
+        </table>
+        
+    
+        
+    <form action="/navigate_to_create">
+        <button>Create new user</button>
+    </form>
+  </body>
+</html>

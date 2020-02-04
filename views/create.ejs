@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1><%= title %></h1>
+    </head>
+    <body>
+        <form method="POST" action="/insert_new_user">
+            <div>
+                <span>Name:</span><input type="text" name="name">
+            </div>
+            <br>
+            <div>
+                <span>Phone:</span><input type="text" name="phone">
+            </div>
+            <br>
+            <div>
+                <span>Password:</span><input type="password" name="password">
+            </div>
+            <br>
+            <div>
+                <span>Roles:</span>
+                <select name="roles">
+                    <option  value="admin">admin</option>
+                    <option value="user">user</option>
+                    <option value="mod">mod</option>
+                    
+                  </select>
+            </div>
+            <br>
+            <input type="submit" value="Save">
+        </form>
+        <form action="/" method="GET">
+            <button>Home</button>
+        </form>
+    </body>
+    
+</html>
