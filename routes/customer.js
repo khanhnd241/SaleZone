@@ -40,6 +40,7 @@ router.post('/register', (request, response, next) => {
     }
   })
 });
+/*Login */
 router.post('/login', (request, response, next) => {
   var customer = {
     phone: new RegExp('^' + request.body.phone.trim() + '$', "i"),

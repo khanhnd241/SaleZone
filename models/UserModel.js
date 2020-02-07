@@ -3,7 +3,7 @@ var schema = mongoose.Schema;
 var UserSchema = new schema({
     name: {
         type: String,
-        require: true
+        required: true
     },
     phone: {
         type: String,
@@ -31,7 +31,16 @@ var UserSchema = new schema({
 });
 // setter
 UserSchema.path('name').set((inputString) => {
-    return inputString[0].toUpperCase() + inputString.slice(1);
+    for(let i = 0;i < inputString.length;i++) {
+        return inputString[i].toUpperCase() + inputString.slice(1,inputString.length);
+    }
+    
+});
+UserSchema.path('phone').set((inputString) => {
+    return inputString;
+});
+UserSchema.path('password').set((inputString) => {
+    return inputString;
 });
 // FoodSchema.path('name').set((input) => {
 //     return input;
