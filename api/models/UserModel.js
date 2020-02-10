@@ -21,6 +21,10 @@ var UserSchema = new schema({
         type: Array,
         default: ['1','2','3']
     },
+    management: {
+        type: Array,
+        default: ['Quyen 1','Quyen 2','Quyen 3']
+    },
     roles: {
         type: [{
             type: String,

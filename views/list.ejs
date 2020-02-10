@@ -13,6 +13,7 @@
                 <th>Số điện thoại</th>
                 <th>Mật khẩu</th>
                 <th>Quyền</th>
+                <th>Quản lí chức năng</th>
                 <th>Ngày tạo</th>
                 <th>Lịch sử tìm kiếm</th>
                 <th></th>
@@ -23,6 +24,7 @@
                 <td><%= Users[i].phone %></td>
                 <td><%= Users[i].password %></td>
                 <td><%= Users[i].roles %></td>
+                <td><%= Users[i].management %></td>
                 <td><%= Users[i].create_date %></td>
                 <td><%= Users[i].history %></td>
                   <form action="/select_user" method="POST">

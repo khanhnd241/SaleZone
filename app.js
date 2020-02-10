@@ -4,11 +4,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/admin/users');
-var customerRouter = require('./routes/customer');
+var indexRouter = require('./api/routes/index');
+var usersRouter = require('./api/routes/admin/usersRoute');
+var customerRouter = require('./api/routes/customer');
 var app = express();
-
 //connect to db
 var mongoose = require('mongoose');
 let option = {
