@@ -15,7 +15,7 @@
     "http-errors": "~1.6.3",
     "inherit": "^2.2.7",
     "js-alert": "^1.0.4",
-    "mongoose": "^4.10.2",
+    "mongoose": "^4.13.21",
     "morgan": "~1.9.1",
     "popup": "0.0.3",
     "popups": "^1.1.3"
